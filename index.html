@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="myimage" src="bugatti.jpg" width="500" height="400"><br>
+    Model : <input type="text" id="modelname" value="Bugatti"><br><br>
+    <button onclick="change()">Change</button>
+    <script>
+        var image = document.getElementById("myimage");
+        var name = document.getElementById("modelname");
+        function change() {
+            var name = document.getElementById("modelname");
+            if (image.src == "./bugatti.jpg") {
+                image.src = "./ferrari.jpg";
+                name.value = "Ferrari";
+            }
+            else if (image.src == "./ferrari.jpg") {
+                image.src = "./ford.jpg";
+                name.value = "Ford";
+            }
+            else if (image.src == ".//ford.jpg") {
+                image.src = "./lambo.jpg";
+                name.value = "Lambo";
+            }
+            else if (image.src == "./lambo.jpg") {
+                image.src = "./rolls.jpg";
+                name.value = "Rolls";
+            }
+            else {
+                image.src = "./bugatti.jpg";
+                name.value = "Bugatti";
+            }
+        }
+    </script>
+</body>
+
+</html>
